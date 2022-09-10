@@ -27,6 +27,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register/', views.registerPage, name="register"),
     path('login/', views.loginPage, name='login'),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
