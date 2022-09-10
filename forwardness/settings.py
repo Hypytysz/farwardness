@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-_o(*-_#@f-e0r6!)o2_jp!mtba47!&1owgkt%z!+0a8e2*b04f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://desolate-tor-75824.herokuapp.com"]
 
 
 # Application definition
@@ -130,3 +131,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import django_heroku
+django_heroku.settings(locals())
