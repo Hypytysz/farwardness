@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import  static
 from rest_framework import routers
 from registration import views
@@ -24,8 +24,9 @@ router = routers.DefaultRouter()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name='homepage'),
+    path('', include(router.urls)),
     path('register/', views.registerPage, name="register"),
     path('login/', views.loginPage, name='login'),
-
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
