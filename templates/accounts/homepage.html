@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #198754 !important;
+		}
+        .navbar {
+          background: #198754 !important;
+          padding-left: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 5px;
+        }
+
+        .container-fluid1 {
+            background-size: cover;
+            background-image: url('../../media/biuro2.jpg');
+        }
+        .container-fluid2 {
+            position: relative;
+            background: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container-fluid3 {
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container-fluid4 {
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .customers {
+            float: left;
+            text-align: center;
+            width: 130px;
+            color: #fff;
+            background-color: rgba(38, 165, 38, 0.5);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+        .customers2 {
+            float: left;
+            position: relative;left:10px;
+            text-align: center;
+            width: 130px;
+            color: #fff;
+            background-color: rgba(38, 165, 38, 0.5); /* rgba dla przezroczystości */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .numeric {
+          float:left;
+          width:40%;
+
+        }
+
+        .projects {
+          float:left;
+          width:30%;
+
+        }
+        .header1 {
+            text-align: right;
+            padding: 0 50px 30px 80px;
+        }
+        .bars {
+            padding-top: 50px;
+        }
+        .progress {
+            position: static;
+            float: right;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .progress-bar {
+            text-align: center;
+        }
+        .design {
+            padding: 25px;
+            position: relative;right:198px;
+        }
+        .design2 {
+            padding: 25px;
+            position: relative;right:213px;
+        }
+        .design3 {
+            padding: 25px;
+            position: relative;right:187px;
+        }
+        .link {
+            position: relative;left:-250px;bottom: -70px;
+        }
+        .container-bar {
+            position: relative;left:-345px;
+        }
+        .img-circle {
+            text-align: center
+        }
+        .rounded-circle {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+            .lock:hover .icon-unlock,
+            .lock .icon-lock {
+                display: none;
+                transform: scale(1.5);
+            }
+            .lock:hover .icon-lock {
+                display: inline;
+            }
+            </style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">My projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Resume</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#section4">About me</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#section5">Contact</a>
+      </li>
+
+            <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid1" style="padding:200px 90px;text-align: justify;">
+    <p><h6 class="title mbr-section-title mbr-fonts-style display-6"><small><strong>Arkadiusz Nowosielski</strong></small></h6>
+    <p><h2 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm Web</strong></h2>
+        <h2 class="title mbr-section-title mbr-fonts-style display-5"><strong>Designer</strong></h2>
+			<div class="customers">
+                <div class="numeric"><strong><a style="font-size: 30px">0 </a></strong></div>
+                <div class="projects"><a style="font-size:12px;">COMPLETED <br> PROJECTS</a></div>
+            </div>
+			<div class="customers2">
+                <div class="numeric"><strong><a style="font-size: 30px">0 </a></strong></div>
+                <div class="projects"><a style="font-size:12px;">SATISFIED <br> CUSTOMERS</a></div>
+            </div>
+
+                <div class="link mbr-link">
+                    <p class="resume-link mbr-fonts-style display-7">
+                        <span class="line"></span>
+                        <a href="#section3" style="color: black">Watch Resume</a>
+                    </p>
+                 </div>
+</div>
+
+
+<div id="section2" class="container-fluid2 bg-white" style="padding:130px 90px;text-align: justify-all;">
+    <div class="header1"><h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm using <a style="color: darkred">top leading design</a><br>
+    </strong></h3></div> <div class="header1"><h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>methods in my work</strong></h3></div>
+    <div class="bars">
+                <div class="container-bar">
+    <div class="design" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Web design</a></strong></small></div>
+
+    <div class="progress">
+  <div class="progress-bar bg-danger" style="width:210px">70%</div>
+
+</div>
+    <div class="design2" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Branding</a></strong></small></div>
+        <div class="progress">
+  <div class="progress-bar bg-danger" style="width:270px">90%</div>
+
+</div>
+    <div class="design3" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Photography</a></strong></small></div>
+        <div class="progress">
+  <div class="progress-bar bg-danger" style="width:255px">85%</div>
+        </div>
+</div>
+</div>
+</div>
+
+<div id="section3" class="container-fluid3 bg-black text-white" style="padding:100px 20px;">
+    <div class="container">
+
+        <div class="row justify-content-left">
+            <div class="col-12">
+                    <h1 class="mbr-section-title mbr-fonts-style display-2"><strong>Experiance, studies and courses</strong></h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 row inline">
+                <div class="col-12 col-sm-3">
+                    <p class="date mbr-fonts-style display-5"><strong>2019-Present</strong></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p class="workplace mbr-fonts-style display-7"><strong>Power engineering,<br>Colegium Witelona</strong></p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="description mbr-fonts-style display-7">In this school, I took a basic python course for the first time, which encouraged me to continue my studies in this field. I'm in the process of writing an engineering thesis on nuclear energy.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <hr style="height: 3px; color: red; background-color: white;" />
+        <div class="row">
+            <div class="col-12 row inline">
+                <div class="col-12 col-sm-3">
+                    <p class="date mbr-fonts-style display-5"><strong>2021-2022</strong></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p class="workplace mbr-fonts-style display-7"><strong>Forklift operator,<br>Amazon Fulfillment</strong></p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="description mbr-fonts-style display-7">
+This is my last job before I decided to change the industry. I don't regret it because this is where I earned my first bootcamp!</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr style="height: 3px; color: red; background-color: white;" />
+
+        <div class="row">
+            <div class="col-12 row inline">
+                <div class="col-12 col-sm-3">
+                    <p class="date mbr-fonts-style display-5"><strong>2022-2022</strong></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p class="workplace mbr-fonts-style display-7"><strong>Bootcamp Python XL<br>backend/web
+                        <br>ALX</strong></p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="description mbr-fonts-style display-7">
+During this course I learned the basics of programming, got to know django, MySQL and deepened my knowledge of GIT. It was a backend course, so I learn the frontend by myself.</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.files.fm/f/4s5sy5hwz/">
+        <button type="button" class="btn btn-danger">Download Resume</button></a>
+
+
+
+
+
+    </div>
+</div>
+<div id="section4" class="container-fluid4 bg-warning" style="padding:200px 90px;text-align: justify-all;">
+
+<div class="img-circle">
+<img src="../../media/profilowe2.jpg" class="rounded-circle" alt="Cinque Terre">
+    <div class="title mbr-section-title mbr-fonts-style display-6" style="text-justify: auto">Arkadiusz Nowosielski<br><strong>Programmer/Web designer</strong></div>
+    <p class="description mbr-fonts-style display-7" style="font-family: Arial, Helvetica, sans-serif;">
+        I am looking for a job in which I will develop myself.<br> Gain experience and improve my skills is my target.<br>
+    I would like the code written by me to be the most<br>readableand well-optimized. <br></p>
+
+    <a href="https://www.facebook.com/arkadiusz.nowosielski.56/" class="lock">
+    <img src="../../media/facebook.png" class="icon-unlock" alt="HTML tutorial" style="width:42px;height:42px;">
+    <img src="../../media/facebook2.png" class="icon-lock" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+    <a href="https://github.com/Hypytysz/" class="lock">
+    <img src="../../media/git.png" class="icon-unlock" alt="HTML tutorial" style="width:42px;height:42px;">
+    <img src="../../media/git2.png" class="icon-lock" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+    </a>
+    <a href="#section4" onclick="AnimationEvent" class="lock">
+    <img src="../../media/in.png" class="icon-unlock" alt="HTML tutorial" style="width:49px;height:49px;">
+    <img src="../../media/in2.png" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
+</a>
+</div>
+</div>
+<div id="section5" class="container-fluid4 bg-black text-white" style="padding:200px 90px;text-align: justify-all;">
+    <div class="container">
+        <div class="row content-wrapper justify-content-center">
+            <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 left-side">
+                    <h3 class="mbr-section-title mbr-fonts-style display-7"><strong>Contact</strong></h3>
+                    <p class="mbr-fonts-style description display-7"><br></p>
+                    <p class="mbr-fonts-style contacts-name display-7">EMAIL:</p>
+                    <p class="mbr-fonts-style contacts-info display-7">arek1nowosielski@gmail.com</p>
+                    <p class="mbr-fonts-style contacts-name display-7">PHONE:</p>
+                    <p class="mbr-fonts-style contacts-info margin display-7">+48 503 932 006</p>
+                </div>
+            </div>
+
+            <div class="col-lg-7 offset-lg-1 col-12" data-form-type="formoid">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="UWLZX4EPLgOUTyFDxZ9/TJs2YJIzONPQHxv8XWo5KO8IuFz3J1Ih27I7Dp/mgQKz/7t/kJMuJ/OvRieFV+IsddheHRFInIz6Sb1LHlyFG8DXgfzCEuXMmf1WPu3Aomw0.NnKybrJusQkHH7AWPOxm/5epXAt7dN5hrf6anwo05cVbpnLr4asAZ4X2zwr4Y4IvmyYpq9y9bk42hzFEeTVzBktp3bYlNVK4/bz2psYuSvp/LMtGXJLQSIDCR8KYSdUH">
+                    <div class="form-row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
+                    </div>
+
+                    <div class="dragArea form-row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-heading">
+                            <h2 class="title mbr-section-title display-7"><strong>I am always looking for great collaborators. Let’s message me and make <a class="text" style="color: crimson">something together!</a></strong></h2>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 col-sm-12 form-group" data-for="name">
+                            <label for="name-contact2-8" class="form-control-label mbr-fonts-style display-7">Your name (required)</label>
+                            <input type="text" name="name" placeholder="Name" data-form-field="name" required="required" class="form-control display-7" value="" id="name-contact2-8">
+                        </div>
+                        <div data-for="email" class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label for="email-contact2-8" class="form-control-label mbr-fonts-style display-7">Your email (required)</label>
+                            <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control display-7" required="required" value="" id="email-contact2-8">
+                        </div>
+                        <div data-for="phone" class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label for="phone-contact2-8" class="form-control-label mbr-fonts-style display-7">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="Phone" data-form-field="phone" class="form-control display-7" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="" id="phone-contact2-8">
+                        </div>
+                        <div data-for="number" class="col-lg-6 col-md-12 col-sm-12 form-group">
+                            <label for="number-contact2-8" class="form-control-label mbr-fonts-style display-7">Choose a Budget (PLN)</label>
+                            <input type="text" name="number" placeholder="Your Budget" data-form-field="number" class="form-control display-7" value="" id="number-contact2-8">
+                        </div>
+                        <div data-for="message" class="col-lg-12 col-md-12 col-sm-12 form-group" style="">
+                            <label for="message-contact2-8" class="form-control-label mbr-fonts-style display-7">Your message</label>
+                            <textarea name="message" placeholder="Message" data-form-field="message" class="form-control display-7" id="message-contact2-8"></textarea>
+                        </div>
+                        <div class="col-auto" style="">
+                            <button type="submit" class="btn btn-danger">Contact Me</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
