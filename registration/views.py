@@ -1,8 +1,12 @@
+import os
+
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm
 from django.contrib import messages
+from django.core.mail import send_mail
 
 # Create your views here.
+
 
 def registerPage(request):
     form = CreateUserForm
@@ -22,4 +26,18 @@ def loginPage(request):
 
 def homepage(request):
     context = {}
-    return render(request, 'accounts/homepage.html', context)
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        budget = request.POST['budget']
+        message = request.POST['message']
+        send_mail(
+            name, # subject
+            message + ' phone: ' +phone + ' budget: ' + budget, # messege
+            email, # from email
+            [os.getenv('EMAIL')], # to email
+        )
+        return render(request, 'accounts/homepage.html', {'name':name, 'email':email, 'message':message, 'phone':phone, 'budget':budget})
+    else:
+        return render(request, 'accounts/homepage.html', context)

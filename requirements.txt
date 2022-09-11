@@ -5,3 +5,4 @@ setuptools==65.3.0
 sqlparse==0.4.2
 tzdata==2022.2
 django_heroku
+python-dotenv==0.21.0
