@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<style>
 		body,
 		html {
@@ -51,9 +51,9 @@
             -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .customers {
-            float: left;
+            position: relative;left:15px;
             text-align: center;
-            width: 130px;
+            width: 120px;
             color: #fff;
             background-color: rgba(38, 165, 38, 0.5);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -62,10 +62,9 @@
 
         }
         .customers2 {
-            float: left;
-            position: relative;left:10px;
+            position: relative;left:20px;
             text-align: center;
-            width: 130px;
+            width: 120px;
             color: #fff;
             background-color: rgba(38, 165, 38, 0.5); /* rgba dla przezroczystości */
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -73,15 +72,41 @@
           -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
+        .cos {
+            position: relative;left:5px;
+            text-decoration: none;
+          background:
+            linear-gradient(
+              to right,
+              rgba(100, 200, 200, 1),
+              rgba(100, 200, 200, 1)
+            ),
+            linear-gradient(
+              to right,
+              rgba(255, 0, 0, 1),
+              rgba(255, 0, 180, 1),
+              rgba(0, 100, 200, 1)
+          );
+          background-size: 100% 3px, 0 3px;
+          background-position: 100% 100%, 0 100%;
+          background-repeat: no-repeat;
+          transition: background-size 400ms;
+        }
+
+        .cos:hover {
+  background-size: 0 3px, 100% 3px;
+            transition: background-size 400ms;
+}
+
         .numeric {
           float:left;
-          width:40%;
+
 
         }
 
         .projects {
           float:left;
-          width:30%;
+
 
         }
         .header1 {
@@ -93,7 +118,7 @@
         }
         .progress {
             position: static;
-            float: right;
+
             width: 300px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -102,18 +127,7 @@
         .progress-bar {
             text-align: center;
         }
-        .design {
-            padding: 25px;
-            position: relative;right:198px;
-        }
-        .design2 {
-            padding: 25px;
-            position: relative;right:213px;
-        }
-        .design3 {
-            padding: 25px;
-            position: relative;right:187px;
-        }
+
         .link {
             position: relative;left:-250px;bottom: -70px;
         }
@@ -136,6 +150,9 @@
             }
             .lock:hover .icon-lock {
                 display: inline;
+            }
+            .text-wrapper {
+                position: relative;left:-150px;
             }
             </style>
 
@@ -169,49 +186,87 @@
 </nav>
 
 <div id="section1" class="container-fluid1" style="padding:200px 90px;text-align: justify;">
-    <p><h6 class="title mbr-section-title mbr-fonts-style display-6"><small><strong>Arkadiusz Nowosielski</strong></small></h6>
-    <p><h2 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm Web</strong></h2>
-        <h2 class="title mbr-section-title mbr-fonts-style display-5"><strong>Designer</strong></h2>
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(154, 7, 18);"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+
+                <h2 class="mbr-fonts-style mb-3 mbr-section-subtitle display-7"><strong>Arkadiusz Nowosielski</strong></h2>
+
+                <h1 class="mbr-fonts-style mb-3 mbr-section-title display-1"><strong>I’m Web<br>Designer</strong></h1>
+
+                <div class="row">
 			<div class="customers">
                 <div class="numeric"><strong><a style="font-size: 30px">0 </a></strong></div>
                 <div class="projects"><a style="font-size:12px;">COMPLETED <br> PROJECTS</a></div>
             </div>
+
 			<div class="customers2">
                 <div class="numeric"><strong><a style="font-size: 30px">0 </a></strong></div>
                 <div class="projects"><a style="font-size:12px;">SATISFIED <br> CUSTOMERS</a></div>
             </div>
 
-                <div class="link mbr-link">
-                    <p class="resume-link mbr-fonts-style display-7">
-                        <span class="line"></span>
-                        <a href="#section3" style="color: black">Watch Resume</a>
-                    </p>
-                 </div>
+                </div>
+            <a class="cos" style="color: black" href="#section3">Watch resume</a>
+
+
+            </div>
+        </div>
+
+    </div>
+
 </div>
+
 
 
 <div id="section2" class="container-fluid2 bg-white" style="padding:130px 90px;text-align: justify-all;">
-    <div class="header1"><h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm using <a style="color: darkred">top leading design</a><br>
-    </strong></h3></div> <div class="header1"><h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>methods in my work</strong></h3></div>
-    <div class="bars">
-                <div class="container-bar">
-    <div class="design" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Web design</a></strong></small></div>
+        <div class="container">
 
-    <div class="progress">
-  <div class="progress-bar bg-danger" style="width:210px">70%</div>
 
-</div>
-    <div class="design2" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Branding</a></strong></small></div>
-        <div class="progress">
-  <div class="progress-bar bg-danger" style="width:270px">90%</div>
+        <div class="row align-items-center">
 
-</div>
-    <div class="design3" style="text-align: right"> <small><strong> <a class="title mbr-section-title mbr-fonts-style">Photography</a></strong></small></div>
-        <div class="progress">
-  <div class="progress-bar bg-danger" style="width:255px">85%</div>
+            <div class="col-12 col-md-6">
+                <div class="image-design">
+                    <img src="../../media/design2.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md">
+                <div class="text-wrapper">
+                    <div class="main-heading">
+                        <h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm using <a style="color: darkred">top leading design</a> methods in my work</strong></h3>
+                    </div>
+
+                    <p class="design">
+                        <strong>Web-design<br></strong>
+                    </p>
+
+                    <div class="progress">
+                      <div class="progress-bar bg-danger" style="width:210px">70%<br></div>
+                    </div>
+
+                    <p class="design2">
+                        <strong>Branding<br></strong>
+                    </p>
+
+                    <div class="progress">
+                      <div class="progress-bar bg-danger" style="width:270px">90%<br></div>
+
+                    </div>
+
+                    <p class="design3">
+                        <strong>Photography<br></strong>
+                    </p>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" style="width:255px">85%<br></div>
+                    </div>
+
+                </div>
+            </div>
         </div>
-</div>
-</div>
+    </div>
 </div>
 
 <div id="section3" class="container-fluid3 bg-black text-white" style="padding:100px 20px;">
@@ -289,8 +344,8 @@ During this course I learned the basics of programming, got to know django, MySQ
 <img src="../../media/profilowe2.jpg" class="rounded-circle" alt="Cinque Terre">
     <div class="title mbr-section-title mbr-fonts-style display-6" style="text-justify: auto">Arkadiusz Nowosielski<br><strong>Programmer/Web designer</strong></div>
     <p class="description mbr-fonts-style display-7" style="font-family: Arial, Helvetica, sans-serif;">
-        I am looking for a job in which I will develop myself.<br> Gain experience and improve my skills is my target.<br>
-    I would like the code written by me to be the most<br>read able and well-optimized. <br></p>
+        Developing my skills and gaining the necessary experience are my priority.<br> I pay attention to the readability and optimization of the code.<br> When programming, I feel like a fish in the water.<br>
+</p>
 
     <a href="https://www.facebook.com/arkadiusz.nowosielski.56/" class="lock">
     <img src="../../media/facebook.png" class="icon-unlock" alt="HTML tutorial" style="width:42px;height:42px;">
@@ -300,7 +355,6 @@ During this course I learned the basics of programming, got to know django, MySQ
     <img src="../../media/git.png" class="icon-unlock" alt="HTML tutorial" style="width:42px;height:42px;">
     <img src="../../media/git2.png" class="icon-lock" alt="HTML tutorial" style="width:42px;height:42px;">
 </a>
-    </a>
     <a href="#section4" onclick="AnimationEvent" class="lock">
     <img src="../../media/in.png" class="icon-unlock" alt="HTML tutorial" style="width:49px;height:49px;">
     <img src="../../media/in2.png" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
@@ -315,10 +369,30 @@ During this course I learned the basics of programming, got to know django, MySQ
                     <br> <br>
                     <h3 class="mbr-section-title mbr-fonts-style display-7"><strong>Contact</strong></h3>
                     <p class="mbr-fonts-style description display-7"><br></p>
-                    <p class="mbr-fonts-style contacts-name display-7">EMAIL:</p>
-                    <p class="mbr-fonts-style contacts-info display-7">arek1nowosielski@gmail.com</p>
-                    <p class="mbr-fonts-style contacts-name display-7">PHONE:</p>
-                    <p class="mbr-fonts-style contacts-info margin display-7">+48 503 932 006</p>
+                    <a onclick="AnimationEvent" class="lock">
+                    <img src="../../media/email.png" onclick="CopyText()" class="icon-unlock" alt="HTML tutorial" style="width:49px;height:49px;">
+                    <img src="../../media/email2.png" onclick="CopyText()" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
+                    <input style="text-align:center; width: 220px" type="text" value="arek1nowosielski@gmail.com" id="yourtext">
+                    </a>
+                    <a onclick="AnimationEvent" class="lock">
+                    <img src="../../media/phone2.png" onclick="CopyText2()" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
+                    <img src="../../media/phone.png" onclick="CopyText2()" class="icon-unlock" alt="HTML tutorial" style="width:49px;height:49px;">
+                    <input style="text-align:center; width: 220px" type="text" value="+48 503 932 006" id="yourtext2">
+                    </a>
+{% block scripts %}
+<script>
+  function CopyText() {
+  var text = document.getElementById('yourtext')
+  text.select();
+  document.execCommand('copy')
+}
+  function CopyText2() {
+  var text = document.getElementById('yourtext2')
+  text.select();
+  document.execCommand('copy')
+}
+</script>
+{% endblock scripts %}
                 </div>
             </div>
             <div class="col-lg-7 offset-lg-1 col-12" data-form-type="formoid">
