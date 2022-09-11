@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 
-<html>
+<!DOCTYPE html>
 <head>
+            {% load static %}
 	<title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -10,141 +10,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<style>
-		body,
-		html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			background: #198754 !important;
-		}
-        .navbar {
-          background: #198754 !important;
-          padding-left: 20px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          border-radius: 5px;
-        }
-
-        .container-fluid1 {
-            background-size: cover;
-            background-image: url('../../media/biuro2.jpg');
-        }
-        .container-fluid2 {
-            position: relative;
-            background: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .container-fluid3 {
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .container-fluid4 {
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .customers {
-            position: relative;left:15px;
-            text-align: center;
-            width: 120px;
-            color: #fff;
-            background-color: rgba(38, 165, 38, 0.5);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-        }
-        .customers2 {
-            position: relative;left:20px;
-            text-align: center;
-            width: 120px;
-            color: #fff;
-            background-color: rgba(38, 165, 38, 0.5); /* rgba dla przezroczystości */
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        .cos {
-            position: relative;left:5px;
-            text-decoration: none;
-          background:
-            linear-gradient(
-              to right,
-              rgba(100, 200, 200, 1),
-              rgba(100, 200, 200, 1)
-            ),
-            linear-gradient(
-              to right,
-              rgba(255, 0, 0, 1),
-              rgba(255, 0, 180, 1),
-              rgba(0, 100, 200, 1)
-          );
-          background-size: 100% 3px, 0 3px;
-          background-position: 100% 100%, 0 100%;
-          background-repeat: no-repeat;
-          transition: background-size 400ms;
-        }
-
-        .cos:hover {
-  background-size: 0 3px, 100% 3px;
-            transition: background-size 400ms;
-}
-
-        .numeric {
-          float:left;
-
-
-        }
-
-        .projects {
-          float:left;
-
-
-        }
-
-        .progress {
-            width: 300px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .progress-bar {
-            text-align: center;
-        }
-
-        .img-circle {
-            text-align: center
-        }
-        .rounded-circle {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-            .lock:hover .icon-unlock,
-            .lock .icon-lock {
-                display: none;
-                transform: scale(1.5);
-            }
-            .lock:hover .icon-lock {
-                display: inline;
-            }
-            .text-wrapper {
-                position: relative;left:-150px;
-            }
-            .image-design {
-                position: static;
-                scale: revert;
-            }
-            </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+</style>
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -176,7 +44,7 @@
 </nav>
 
 <div id="section1" class="container-fluid1" style="padding:200px 90px;text-align: justify;">
-    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(154, 7, 18);"></div>
+<div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(154, 7, 18);"></div>
 
     <div class="container">
 
@@ -202,9 +70,9 @@
 
 
             </div>
-        </div>
-
     </div>
+
+</div>
 
 
 
@@ -212,15 +80,16 @@
 
 
 <div id="section2" class="container-fluid2 bg-white" style="padding:130px 90px;text-align: justify;">
-<div class="container">
+    <div class="container">
 
-<div class="row">
+        <div class="row no-gutters">
+
+            <div class="col-1 col-sm-3 offset-3"><img src="../../media/design3.png" alt="Cinque Terre"></div>
+
+                <div class="col-1 col-md-6">
 
 
-<div class="col-md-6 offset-md-6">
-<div class="text-wrapper">
-                                <div class="img">
-                    <img src="../../media/design3.png" alt="Cinque Terre">                        </div>
+
                     <div class="main-heading">
                         <h3 class="title mbr-section-title mbr-fonts-style display-5"><strong>I'm using <a style="color: darkred">top leading design</a><br> methods in my work</strong></h3>
                     </div>
@@ -249,10 +118,10 @@
                     <div class="progress">
                         <div class="progress-bar bg-danger" style="width:255px">85%<br></div>
                     </div>
-</div>
-</div>
-</div>
-</div>
+
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -262,10 +131,9 @@
 
         <div class="row justify-content-left">
             <div class="col-12">
-                    <h1 class="mbr-section-title mbr-fonts-style display-2"><strong>Experiance, studies and courses</strong></h1>
+                <h1 class="mbr-section-title mbr-fonts-style display-2"><strong>Experiance, studies and courses</strong></h1>
             </div>
         </div>
-
 
         <div class="row">
             <div class="col-12 row inline">
@@ -282,25 +150,28 @@
         </div>
 
 
-        <hr style="height: 3px; color: red; background-color: white;" />
+        <hr style="height: 3px; color: red; background-color: white;">
         <div class="row">
             <div class="col-12 row inline">
                 <div class="col-12 col-sm-3">
                     <p class="date mbr-fonts-style display-5"><strong>2021-2022</strong></p>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <p class="workplace mbr-fonts-style display-7"><strong>Forklift operator,<br>Amazon Fulfillment</strong></p>
+                    <p class="workplace mbr-fonts-style display-7">
+                        <strong>Forklift operator,<br>Amazon Fulfillment</strong>
+                    </p>
                 </div>
                 <div class="col-12 col-sm-6">
                     <p class="description mbr-fonts-style display-7">
-This is my last job before I decided to change the industry. I don't regret it because this is where I earned my first bootcamp!</p>
+                    This is my last job before I decided to change the industry. I don't regret it because this is where I earned my first bootcamp!
+                    </p>
                 </div>
             </div>
         </div>
 
 
 
-        <hr style="height: 3px; color: red; background-color: white;" />
+        <hr style="height: 3px; color: red; background-color: white;">
 
         <div class="row">
             <div class="col-12 row inline">
@@ -313,16 +184,12 @@ This is my last job before I decided to change the industry. I don't regret it b
                 </div>
                 <div class="col-12 col-sm-6">
                     <p class="description mbr-fonts-style display-7">
-During this course I learned the basics of programming, got to know django, MySQL and deepened my knowledge of GIT. It was a backend course, so I learn the frontend by myself.</p>
+                        During this course I learned the basics of programming, got to know django, MySQL and deepened my knowledge of GIT. It was a backend course, so I learn the frontend by myself.</p>
                 </div>
             </div>
         </div>
         <a href="https://www.files.fm/f/4s5sy5hwz/">
         <button type="button" class="btn btn-danger">Download Resume</button></a>
-
-
-
-
 
     </div>
 </div>
@@ -362,6 +229,7 @@ During this course I learned the basics of programming, got to know django, MySQ
                     <img src="../../media/email2.png" onclick="CopyText()" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
                     <input style="text-align:center; width: 220px" type="text" value="arek1nowosielski@gmail.com" id="yourtext">
                     </a>
+                    <br><br>
                     <a onclick="AnimationEvent" class="lock">
                     <img src="../../media/phone2.png" onclick="CopyText2()" class="icon-lock" alt="HTML tutorial" style="width:49px;height:49px;">
                     <img src="../../media/phone.png" onclick="CopyText2()" class="icon-unlock" alt="HTML tutorial" style="width:49px;height:49px;">
