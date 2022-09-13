@@ -1,6 +1,6 @@
 import os
-
 from django.shortcuts import render, redirect
+
 from .forms import CreateUserForm
 from django.contrib import messages
 from django.core.mail import send_mail
